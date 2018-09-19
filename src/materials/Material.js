@@ -179,6 +179,8 @@ Material.prototype = Object.assign( Object.create( EventDispatcher.prototype ), 
 		if ( this.directLightMapIntensity !== undefined ) data.directLightMapIntensity = this.directLightMapIntensity;
 		if ( this.indirectLightMap && this.indirectLightMap.isTexture ) data.indirectLightMap = this.indirectLightMap.toJSON( meta ).uuid;
 		if ( this.indirectLightMapIntensity !== undefined ) data.indirectLightMapIntensity = this.indirectLightMapIntensity;
+		if ( this.lightMap && this.lightMap.isTexture ) data.indirectLightMap = this.lightMap.toJSON( meta ).uuid;
+		if ( this.lightMapIntensity !== undefined ) data.indirectLightMapIntensity = this.lightMapIntensity;
 		if ( this.aoMap && this.aoMap.isTexture ) data.aoMap = this.aoMap.toJSON( meta ).uuid;
 		if ( this.aoMapIntensity !== undefined ) data.aoMapIntensity = this.aoMapIntensity;
 		if ( this.bumpMap && this.bumpMap.isTexture ) {
